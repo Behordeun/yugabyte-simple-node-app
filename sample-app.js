@@ -11,10 +11,10 @@ const config = {
     user: 'yugabyte',
     password: 'yugabyte',
     // Uncomment and initialize the SSL settings for YugabyteDB Managed and other secured types of deployment
-    // ssl: {
-    //     rejectUnauthorized: true,
-    //     ca: fs.readFileSync('path_to_your_root_certificate').toString()
-    // },
+    ssl: {
+        rejectUnauthorized: true,
+        ca: fs.readFileSync('../root.crt').toString()
+    },
     connectionTimeoutMillis: 5000
 };
 
